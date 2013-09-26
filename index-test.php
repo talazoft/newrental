@@ -15,3 +15,4 @@ require_once($yii);
 Yii::createWebApplication($config)->run();
 
 //test
+//test by rizka
