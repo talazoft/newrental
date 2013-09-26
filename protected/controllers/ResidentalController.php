@@ -12,6 +12,10 @@ class ResidentalController extends Controller
         public function actionPdfform(){
                 echo $this->renderPartial('residentalpdf');
         }
+        
+        public function actionOpen(){
+            $this->render('index');
+        }
 
 	// Uncomment the following methods and override them if needed
 	/*
