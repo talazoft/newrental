@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+#portrait-error {
+	text-align:center;
+	margin: 240px 20px 20px 20px;
+	font-size: 35px;
+	color: #666;
+	font-weight: bold;
+	display:none;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    #portrait-error {display:block}
+    #landscape {display:none}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape){
+    #portrait-error {display:none}
+    #landscape {display:block}
+}
