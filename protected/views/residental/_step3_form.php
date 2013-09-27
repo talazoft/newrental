@@ -1,5 +1,5 @@
 <div class="form_subs" id="form_sub3">
-    <div class="step_title">Step 3: Business and Work Information
+    <div class="step_title">Step 3 of 4: Business and Work Information
         <div class="applicantnum" style="float:right">Applicant #1</div>
         <?php /*
         <div class="close_form" style="display:none">

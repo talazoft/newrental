@@ -1,5 +1,5 @@
 <div class="form_subs" id="form_sub4">
-    <div class="step_title">Step 4: Personal Refrence
+    <div class="step_title">Step 4 of 4: Personal Refrence
         <div class="applicantnum" style="float:right">Applicant #1</div>
         <?php /*
         <div class="close_form" style="display:none">
