@@ -1,9 +1,9 @@
 <script type='text/javascript'>
 $(function(){
     var i = 1;
-    $(".add_applicant_button").unbind('click').click(function(e){
+    $("#addapplicant").unbind('click').click(function(e){
         
-        if(i<10){
+        if(i<8){
             i++;
         }
         
@@ -22,14 +22,14 @@ $(function(){
         e.stopPropagation();
     });
     
-    $(".close_applicant_button").unbind('click').click(function(e){
+    $("#removeapplicant").unbind('click').click(function(e){
         
         if(i == 2){
             $("#close_form2").hide();
         }
         
         var isactive = $(".active_form_tab").hasAttr('active');
-        var active_template = '<div class="applicant_title">Applicant</div><div class="applicant_number">#1</div>';
+        var active_template = '<div class="applicant_title">Applicant #1</div>';
         if(isactive){
             var active_id = $(".active_form_tab").attr('id');
             var empty_template = '<a id="valtab'+i+'" href="#form'+i+'">Empty #'+i+'</a>';
@@ -140,7 +140,7 @@ $(function(){
             var nonactive_id = element.attr('id');
             var active_id = $(".active_form_tab").attr('id');
 
-            var active_template = '<div class="applicant_title">Applicant</div><div class="applicant_number">#'+nonactive_id+'</div>';
+            var active_template = '<div class="applicant_title">Applicant #'+nonactive_id+'</div>';
             var nonactive_template = '<a id="valtab'+active_id+'" href="#form'+active_id+'">Applicant #'+active_id+'</a>';
 
             $("#"+nonactive_id).empty();
@@ -234,7 +234,7 @@ $(function(){
     </div>
 </div><!---main_subject_head end----> 
 <div class="content">
-    <div id="tab_container">
+    <div id="tab_container"> <?php /*
         <div class="tab_nav">
             <div class="add_applicant_text">Applicant : <label for="applicant_sum" id="applicant_num">1</label></div>
             <div class="add_applicant_button" >
@@ -250,7 +250,7 @@ $(function(){
             <div class="open_saved_form"><a href="#send_login_openModal">Send Login</a></div>
             <div class="open_saved_form"><a href="#openModal">Open</a></div>
             <div class="open_saved_form"><a>Save</a></div>
-        </div><!---tab_nav end---->
+        </div><!---tab_nav end----> */?>
         
         <?php /*
         <div id="popupMessage2" class="modalDialog2">
@@ -321,29 +321,11 @@ $(function(){
         <!---popup create form login end---->
 
         <div id="tabs">
-            <div class="applicant_list"><?php /*
-                <div class="active_form_tab"> 
-                    <div class="applicant_title">Applicant</div>
-                    <div class="applicant_number">#1</div>
-                </div>
-                <div class="non_active_form_tab">
-                    <ul> 
-                        <li><a id="valtab2" href="#form2">Empty #2</a></li>
-                        <li><a id="valtab3" href="#form3">Empty #3</a></li>
-                        <li><a id="valtab4" href="#form4">Empty #4</a></li>
-                        <li><a id="valtab5" href="#form5">Empty #5</a></li>
-                        <li><a id="valtab6" href="#form6">Empty #6</a></li>
-                        <li><a id="valtab7" href="#form7">Empty #7</a></li>
-                        <li><a id="valtab8" href="#form8">Empty #8</a></li>
-                        <li><a id="valtab9" href="#form9">Empty #9</a></li> 
-                        <li><a id="valtab10" href="#form10">Empty #10</a></li>  
-                    </ul>
-                </div><!---nonactive form tab end----> */ ?>
+            <div class="applicant_list">
                 <ul>
                     <li>
                         <div class="active_form_tab" id="1" empty='false' active='active'>
-                            <div class="applicant_title">Applicant</div>
-                            <div class="applicant_number">#1</div>
+                            <div class="applicant_title">Applicant #1</div>
                         </div>
                     </li>
                     <li>
@@ -381,17 +363,13 @@ $(function(){
                             <a id="valtab8" href="#form8">Empty #8</a>
                         </div>
                     </li>
-                    <li>
-                        <div class="empty_form_tab" id="9" empty='true'>
-                            <a id="valtab9" href="#form9">Empty #9</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="empty_form_tab" id="10" empty='true'>
-                            <a id="valtab10" href="#form10">Empty #10</a>
-                        </div>
-                    </li>
                 </ul>
+                
+            <div class="tab_nav">
+                <div class="add_applicant_button" id="addapplicant"><a><img src="<?php echo Yii::app()->baseUrl; ?>/image/positive.png"></a></div>
+                <div class="add_applicant_button" id="removeapplicant"><a><img src="<?php echo Yii::app()->baseUrl; ?>/image/negative.png"></a></div>
+                <!---<div class="add_applicant_text">Applicant summary : <label for="applicant_sum">8</label></div>---->
+            </div>
             </div><!---applicant_list_non_active  end---->
             <input type="hidden" id='current_step' value="1"/>
             <div id="forms"><?php /*

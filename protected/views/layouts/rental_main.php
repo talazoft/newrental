@@ -22,22 +22,22 @@
             };
             
             $(function() {
-                $('.desc_button1').hide();
+                //$('.desc_button1').hide();
                 $('.desc_button2').unbind('click').click(function(e){
-                    $('.desc_button2').fadeOut().hide("slow");
-                    $('.desc_button1').fadeIn().show("slow");
-                    $('.description').slideUp(350);
-                    
+                    //$('.desc_button2').fadeOut().hide("slow");
+                    //$('.desc_button1').fadeIn().show("slow");
+                    //$('.description').slideUp(350);
+                    $('.close_modalDialog').fadeOut("slow").hide();
                     e.stopPropagation();
                 }); 
 
-                $('.desc_button1').unbind('click').click(function(e){
-                    $('.desc_button1').fadeOut().hide("slow");
-                    $('.desc_button2').fadeIn().show("slow");
-                    $('.description').slideDown(350);
-                    
-                    e.stopPropagation();
-                }); 
+//                $('.desc_button1').unbind('click').click(function(e){
+//                    $('.desc_button1').fadeOut().hide("slow");
+//                    $('.desc_button2').fadeIn().show("slow");
+//                    $('.description').slideDown(350);
+//                    
+//                    e.stopPropagation();
+//                }); 
                 
                 $(".phone").mask("(999) 999-9999");
                 $(".currency").autoNumeric();
@@ -54,8 +54,39 @@
                     next: '.next',
                     timeout: 0,
                     nowrap: true,
+                    fit:true,
                     onPrevNextEvent: function(isNext, zeroBasedSlideIndex, slideElement){
                         var active_id = $(".applicant_list ul li div[active='active']").attr('id');
+
+                        switch(zeroBasedSlideIndex){
+                            case 0:
+                                $("#form_subs").css('height', '1011px');
+                                $("#form_subs_last").css('height', '1011px');
+                                $(".step_form").css('height', '998px');
+                                break;
+                            case 1:
+                                $("#form_subs").css('height', '460px');
+                                $("#form_subs_last").css('height', '460px');
+                                $(".step_form").css('height', '432px');
+                                break;
+                            case 2:
+                                $("#form_subs").css('height', '406px');
+                                $("#form_subs_last").css('height', '406px');
+                                $(".step_form").css('height', '379px');
+                                break;
+                            case 3:
+                                $("#form_subs").css('height', '566px');
+                                $("#form_subs_last").css('height', '566px');
+                                $(".step_form").css('height', '539px');
+                                break;
+                            case 4:
+                                $("#form_subs").css('height', '340px');
+                                $("#form_subs_last").css('height', '340px');
+                                break;
+                            case 5:
+                                $("#form_subs_last").css('height', '498px');
+                                break;
+                        }
                         
                         if(active_id == 1){                                 
                             if(zeroBasedSlideIndex > 3){

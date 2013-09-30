@@ -1,12 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
 
-.tab_nav { width:955px; height: 30px; margin: 0 0 0 5px; padding:0;}
+.tab_nav {
+    height: 42px;
+    margin: 0;
+    padding: 4px 0 0;
+}
 
 #tabs {
 	float:left;
 	width: 958px;
-	margin:3px 0 20px 2px;
+	margin:7px 0 20px 2px;
 	border:0;
 	background: none;
 }
@@ -113,50 +117,85 @@
 		background: #83d50a;
 	}
 	
-	.add_applicant_button a, .close_applicant_button a  {
-		text-align: center;
-		text-decoration: none;
-		float: left;
-		margin: 2px 0 0 10px;
-		padding: 5px 15px 5px 11px;
-		color: #f6f6f6 !important;
-		font-size: 14px;
-		font-weight: bold;
-		background: #bfc0c0;
-		border: 1px solid #f2f2f2;
-		cursor: pointer;
-	}
-	
-	.add_applicant_button a:hover, .close_applicant_button a:hover  {
-		text-align: center;
-		text-decoration: none;
-		float: left;
-		margin: 2px 0 0 10px;
-		padding: 5px 15px 5px 11px;
-		color: #ffffff !important;
-		font-size: 14px;
-		font-weight: bold;
-		background: #a0e90d;
-		border: 1px solid #f2f2f2;
-		cursor: pointer;
-	}
-	
-	.add_applicant_button a:active, .close_applicant_button a:active  {
-		text-align: center;
-		text-decoration: none;
-		float: left;
-		margin: 2px 0 0 10px;
-		padding: 5px 15px 5px 11px;
-		color: #80b612 !important;
-		font-size: 14px;
-		font-weight: bold;
-		background: #a0e90d;
-		border: 1px solid #f2f2f2;
-		cursor: pointer;
-	}
+.add_applicant_button a, 
+.close_applicant_button a  {
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    margin: 2px 0 0 10px;
+    padding: 5px 15px 5px 11px;
+    color: #f6f6f6 !important;
+    font-size: 14px;
+    font-weight: bold;
+    background: #bfc0c0;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+}
 
-	
-	.applicant_list {
+.add_applicant_button a:hover, 
+.close_applicant_button a:hover  {
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    margin: 2px 0 0 10px;
+    padding: 5px 15px 5px 11px;
+    color: #f6f6f6 !important;
+    font-size: 14px;
+    font-weight: bold;
+    background: #a0e90d;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+}
+
+.add_applicant_button a:active, 
+.close_applicant_button a:active  {
+        text-align: center;
+        text-decoration: none;
+        float: left;
+        margin: 2px 0 0 10px;
+        padding: 5px 15px 5px 11px;
+        color: #80b612 !important;
+        font-size: 14px;
+        font-weight: bold;
+        background: #a0e90d;
+        border: 1px solid #f2f2f2;
+        cursor: pointer;
+}
+
+.applicant_list {
+    margin: 0 0 0 4px;
+    position: absolute;
+    width: 955px;
+}
+
+
+.active_form_tab {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #AEB0B1 #AEB0B1 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    float: left;
+    margin: 4px 0 0;
+    padding: 0;
+    width: 135px;
+}
+
+.applicant_title {
+    color: #BFC0C0;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 9px 20px;
+    width: 100px;
+}
+
+	/*.applicant_list {
 		width: 100px;
 		height: 402px;
 		margin: 0 0 0 4px;
@@ -183,7 +222,7 @@
 		margin:0;
 		padding:8px 0 0 0;
 
-	}
+	}*/
 	
 	.applicant_number {
 		text-align:center;
@@ -215,36 +254,48 @@
 
 .applicant_list ul{
     border: 0px;
+    list-style: none;
 }
 
 
-.non_active_form_tab ul li, .applicant_list ul li .non_active_form_tab, .applicant_list ul li .empty_form_tab {
-    background:#bfc0c0;
-    text-align:center;
-    margin:0;
-    padding:10px 0 10px 0;
-    border: 1px solid #aeb0b1;
+.non_active_form_tab ul li, 
+.applicant_list ul li .non_active_form_tab, 
+.applicant_list ul li .empty_form_tab {
+    background: none repeat scroll 0 0 #BFC0C0;
+    border: 1px solid #AEB0B1;
+    float: left;
+    margin: 4px 0 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.applicant_list li{
+    display: inline;
 }
 
 .applicant_list ul li .empty_form_tab{
     background:#DEDFDF;
 }
 
-.applicant_list ul li .non_active_form_tab, .applicant_list ul li .empty_form_tab{
+.applicant_list ul li .non_active_form_tab, 
+.applicant_list ul li .empty_form_tab{
     height: 17px;
     cursor: pointer;
+    width: 70px;
 }
 
 .applicant_list ul li .empty_form_tab{
     cursor: default;
 }
 
-.non_active_form_tab ul li:hover, .applicant_list ul li .non_active_form_tab:hover  {
+.non_active_form_tab ul li:hover, 
+.applicant_list ul li .non_active_form_tab:hover  {
     background:#83d50a;
-    text-align:center;
-    margin:0;
-    padding:10px 0 10px 0;
-    border: 1px solid #aeb0b1;
+    border: 1px solid #AEB0B1;
+    float: left;
+    margin: 4px 0 0;
+    padding: 10px;
+    text-align: center;
 }
 
 .non_active_form_tab ul li a, .applicant_list ul li .non_active_form_tab a, .applicant_list ul li .empty_form_tab a{
@@ -266,20 +317,18 @@ label[for="total"]{
 /*form1 content-----------------------------------------------------------*/
 
 #form1, #forms, #forms_last { 
-	width:852px; 
-	height: 405px; 
-	float:left;
-	margin: 0 0 0 0;
-	padding: 0;
-	border-radius: 0;
-	background:#ffffff;	
-	border: 1px solid #aeb0b1;
-	border-left: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #AEB0B1;
+    border-radius: 0 0 0 0;
+    /*height: 400px;*/
+    margin: 42px 0 0 4px;
+    padding: 0;
+    width: 953px;
 }
 
 #forms_last{
     border: 1px solid #AEB0B1;
-    width: 100%;
+    width: 955px;
 }
 
 .form_sub1/*, .form_subs*/ {
@@ -292,22 +341,25 @@ label[for="total"]{
 }
 
 #form_subs, #form_subs_last {
-    width: 830px;
+    /*width: 830px;*/
     height: 340px;
-    margin: 10px 10px 10px 10px;
     padding:0;
-    border-left: 1px solid #d3d5d5;
+    /*border-left: 1px solid #d3d5d5;*/
+}
+
+#form_subs{
+    height: 1025px;
 }
 
 #form_subs_last {
     border-left: 0px;
-    width: 100%;
+    width: 955px;
     margin: 0px;
 }
 
 .step1_title, .step_title {
 	float:left;
-        width: 810px;
+        width: 924px;
         height: 25px;
         margin: 0 0 0 10px;
         padding:0 0 0 10px;
@@ -318,32 +370,29 @@ label[for="total"]{
 }
 
 .step1_form, .step_form {
-    width: 830px;
+    /*width: 830px;*/
     height: 309px;
     margin: 0;
     padding:0;
     background: #f2f2f2;
-    
-    overflow-y: scroll;	
+    overflow-y: auto;
 }
 
 .step_form{
-    width: 820px;
+    /*width: 820px;*/
     border: 1px solid #d3d5d5;
     margin-left: 9px;
+    /*height: auto;*/
+    height: 998px;
 }
 
 .lbl { font-weight:bold; }
 
 .form_sub_nav, .form_sub_nav_last {
-    width: 840px;
+    /*width: 840px;*/
     height: 35px;
     margin: 10px 10px 10px 10px;
     padding:0;	
-}
-
-.form_sub_nav_last{
-    width: 945px;
 }
 
 .next {
@@ -368,7 +417,7 @@ label[for="total"]{
 
 .back a:hover {
         text-align: center;
-        float: leftt;
+        float: left;
         text-decoration: none;
         margin: 0 0 0 0;
         padding: 9px 25px 9px 25px;
@@ -396,7 +445,7 @@ label[for="total"]{
         text-align: center;
         float: right;
         text-decoration: none;
-        margin: 0 8px 0 5px;
+        margin: 0px 0px 0px 5px;
         padding: 9px 25px 9px 25px;
         color: #ffffff !important;
         font-size: 14px;
@@ -409,7 +458,7 @@ label[for="total"]{
         text-align: center;
         float: right;
         text-decoration: none;
-        margin: 0 8px 0 5px;
+        margin: 0px 0px 0px 5px;
         padding: 9px 25px 9px 25px;
         color: #568d06 !important;
         font-size: 14px;
@@ -422,7 +471,7 @@ label[for="total"]{
     text-align: center;
     float: right;
     text-decoration: none;
-    margin: 0 8px 0 5px;
+    margin: 0px 0px 0px 5px;
     padding: 9px 25px 9px 25px;
     color: #ffffff !important;
     font-size: 14px;
@@ -473,7 +522,12 @@ label[for="total"]{
 
 /*form2 content-----------------------------------------------------------*/
 
-#form2 { width:850px; height: 400px; margin: 0 0 0 5px; padding:0; }
+#form2 { 
+    width:850px; 
+    height: 400px; 
+    margin: 0px 0px 0px 5px;
+    padding:0px; 
+}
 
 /*form3 content-----------------------------------------------------------*/
 
@@ -510,6 +564,56 @@ label[for="total"]{
     float:right;
     margin: 5px 5px 0 0;
     cursor: pointer;
+}
+
+.add_applicant_button a img  {
+        text-align: center;
+        width: 80%;
+}
+
+.add_applicant_button a  {
+        text-align: center;
+        text-decoration: none;
+        float: left;
+        margin: 0 0 0 -1px;
+        padding: 12px 13px 7px 13px;
+        background:#e9e9e9;
+        background: -moz-linear-gradient(#e9e9e9,#d0d2d2);
+        background: -webkit-linear-gradient(#e9e9e9,#d0d2d2);
+        background: -o-linear-gradient(#e9e9e9,#d0d2d2);
+        border: 1px solid #aeb0b1;
+        cursor: pointer;
+        height: 18px;
+        width: 18px;
+}
+
+.add_applicant_button a:hover  {
+        text-align: center;
+        text-decoration: none;
+        float: left;
+        margin: 0 0 0 -1px;
+        padding: 12px 13px 7px 13px;
+        background: #a0e90d;
+        background: -moz-linear-gradient(#a0e90d,#81d20a);
+        background: -webkit-linear-gradient(#a0e90d,#81d20a);
+        background: -o-linear-gradient(#a0e90d,#81d20a);
+        border: 1px solid #aeb0b1;
+        cursor: pointer;
+        height: 18px;
+        width: 18px;
+}
+
+.add_applicant_button a:active  {
+        text-align: center;
+        text-decoration: none;
+        float: left;
+        margin: 0 0 0 -1px;
+        padding: 12px 13px 7px 13px;
+        background: #a0e90d;
+        border: 1px solid #aeb0b1;
+        cursor: pointer;
+        height: 18px;
+        width: 18px;
 }
 
 .add_applicant a  {
@@ -584,7 +688,7 @@ label[for="total"]{
     border: 1px solid #D3D5D5;
     color: #828484;
     font-size: 13px;
-    height: 288px;
+    /*height: 288px;*/
     margin: 0;
     padding: 0 15px 10px;
     width: 905px;

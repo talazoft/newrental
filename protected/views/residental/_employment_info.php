@@ -18,15 +18,9 @@
 </script>
 <fieldset style="text-align: left">
     <legend>Work or Bussiness Information</legend>    
-    <div id="employment1">
-        <div id="emplbl1" class="lbl">#1</div>
-        <?php $this->renderPartial("_employment_info_form", array('cnt'=>1)); ?>
-        <div style="clear: both"></div>
-        <hr/>
-    </div>
     <?php 
-    for($cnt=2;$cnt<=5;$cnt++){ ?>
-        <div id="employment<?php echo $cnt; ?>" style="display: none;">
+    for($cnt=1;$cnt<=6;$cnt++){ ?>
+        <div id="employment<?php echo $cnt; ?>" style="<?php echo $cnt > 1 ? "display: none;" : ""; ?>">
             <div id="emplbl<?php echo $cnt; ?>" class="lbl">#<?php echo $cnt; ?></div>
             <?php $this->renderPartial("_employment_info_form", array('cnt'=>$cnt)); ?>
             <div style="clear: both"></div>

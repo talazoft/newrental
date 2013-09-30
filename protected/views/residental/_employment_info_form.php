@@ -1,35 +1,36 @@
 <script type="text/javascript">
 $(function(){
     
-    function employment(){
-        var emptype = $("#employment_type1 option:selected").val();
+    var cnt = <?php echo $cnt; ?>;
+    function employment(cnt){
+        var emptype = $("#employment_type"+cnt+" option:selected").val();
         switch(emptype){
             case 'fulltime':
-                $("#employed1").show();
-                $("#selfemployed1").hide();
+                $("#employed"+cnt).show();
+                $("#selfemployed1"+cnt).hide();
                 break;
             case 'parttime':
-                $("#employed1").show();
-                $("#selfemployed1").hide();
+                $("#employed"+cnt).show();
+                $("#selfemployed"+cnt).hide();
                 break;
             case 'selfemployed':
-                $("#employed1").hide();
-                $("#selfemployed1").show();
+                $("#employed"+cnt).hide();
+                $("#selfemployed"+cnt).show();
                 break;
             case 'unemployed':
-                $("#employed1").hide();
-                $("#selfemployed1").hide();
+                $("#employed"+cnt).hide();
+                $("#selfemployed"+cnt).hide();
                 break;
         }
     }
     
-    employment();
     
-    $("#employment_type1").unbind('change').change(function(e){
-        employment();
+    employment(cnt);
+
+    $("#employment_type"+cnt).unbind('change').change(function(e){
+        employment(cnt);
         e.stopPropagation();
-    });
-    
+    });    
 });
 </script>
 <div style="margin-left: 14px;">
@@ -43,13 +44,13 @@ $(function(){
 
     echo CHtml::dropdownList("EmploymentInfo[employment_type]", "", 
             $empType, 
-            array('id'=>"employment_type1", 
+            array('id'=>"employment_type$cnt", 
                 'required'=>'required', 'style'=>'width: 288px'));
 ?>
 </div>
-<div id="employed1" style="display: none">
+<div id="employed<?php echo $cnt; ?>" style="display: none">
     <?php $this->renderPartial("_employed_form"); ?>
 </div>
-<div id="selfemployed1" style="display: none">
+<div id="selfemployed<?php echo $cnt; ?>" style="display: none">
     <?php $this->renderPartial("_self_employed_form") ?>
 </div>
