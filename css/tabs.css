@@ -116,6 +116,7 @@
 		color: #ffffff;
 		background: #83d50a;
 	}
+        
 	
 .add_applicant_button a, 
 .close_applicant_button a  {
@@ -170,6 +171,7 @@
 
 
 .active_form_tab {
+    border: 1px solid #AEB0B1;
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
@@ -222,7 +224,7 @@
 		margin:0;
 		padding:8px 0 0 0;
 
-	}*/
+	}
 	
 	.applicant_number {
 		text-align:center;
@@ -232,7 +234,7 @@
 		margin:0;
 		padding:0 0 5px 0;
 
-	}
+	}*/
 	
 .non_active_form_tab {
     width: 99px;
@@ -324,6 +326,7 @@ label[for="total"]{
     margin: 42px 0 0 4px;
     padding: 0;
     width: 953px;
+    
 }
 
 #forms_last{
@@ -337,53 +340,46 @@ label[for="total"]{
         margin: -10px 10px 10px 10px;
         padding:0;
         border-left: 1px solid #d3d5d5;
-        background: #000000;
+        
 }
 
-#form_subs, #form_subs_last {
+#form_subs {
     /*width: 830px;*/
-    height: 340px;
-    padding:0;
+    /*height: 340px;*/
     /*border-left: 1px solid #d3d5d5;*/
+    padding:0;
+   
 }
 
-#form_subs{
-    height: 1025px;
-}
+
 
 #form_subs_last {
     border-left: 0px;
     width: 955px;
-    margin: 0px;
+    height: 340px;
+    margin: 0;
+    padding:0;
 }
 
 .step1_title, .step_title {
-	float:left;
-        width: 924px;
-        height: 25px;
+	
+        width: 912px;
         margin: 0 0 0 10px;
-        padding:0 0 0 10px;
+        padding:10px 0 5px 10px;
         color: #bfc0c0;
         font-size: 16px;
         font-weight:bold;
-
+       
 }
 
-.step1_form, .step_form {
-    /*width: 830px;*/
-    height: 309px;
-    margin: 0;
-    padding:0;
-    background: #f2f2f2;
-    overflow-y: auto;
-}
 
 .step_form{
-    /*width: 820px;*/
+    width: 932px;
     border: 1px solid #d3d5d5;
-    margin-left: 9px;
+    margin : 0 0 0 9px;
     /*height: auto;*/
-    height: 998px;
+    background: #f2f2f2;
+    
 }
 
 .lbl { font-weight:bold; }
@@ -392,14 +388,15 @@ label[for="total"]{
     /*width: 840px;*/
     height: 35px;
     margin: 10px 10px 10px 10px;
-    padding:0;	
+    padding:0;
+    
 }
 
 .next {
 
         margin:0 0 0 0;
         padding: 0;
-
+       
 }
 
 .back a  {
