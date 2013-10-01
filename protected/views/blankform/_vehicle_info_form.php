@@ -24,7 +24,7 @@
     <table width="100%">
         <tr>
             <td width="172px">
-                <label>Age</label>
+                <label>Year</label>
             </td>
             <td>:</td>
             <td>

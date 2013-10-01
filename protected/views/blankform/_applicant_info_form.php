@@ -182,7 +182,7 @@
                                 '2 - $800' => '2 - $800', 
                                 '3 - $1000' => '3 - $1000'
                             ),
-                            array('style'=>'width:96%','disabled'=>'disabled', 'id'=>'pet_num')
+                            array('style'=>'width:95%','disabled'=>'disabled', 'id'=>'pet_num')
                         ); 
                     ?>
                 </td>

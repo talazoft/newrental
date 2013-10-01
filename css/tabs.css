@@ -288,6 +288,7 @@
 
 .applicant_list ul li .empty_form_tab{
     cursor: default;
+    display: none;
 }
 
 .non_active_form_tab ul li:hover, 
@@ -343,14 +344,9 @@ label[for="total"]{
         
 }
 
-#form_subs {
-    /*width: 830px;*/
-    /*height: 340px;*/
-    /*border-left: 1px solid #d3d5d5;*/
-    padding:0;
-   
+.form_subs {
+    height: 1035px;
 }
-
 
 
 #form_subs_last {
@@ -372,14 +368,13 @@ label[for="total"]{
        
 }
 
-
 .step_form{
     width: 932px;
     border: 1px solid #d3d5d5;
     margin : 0 0 0 9px;
-    /*height: auto;*/
+    height: 998px;
     background: #f2f2f2;
-    
+    overflow-y: auto;
 }
 
 .lbl { font-weight:bold; }
@@ -675,9 +670,9 @@ label[for="total"]{
     font-size: 13px;
     height: 293px;
     margin: 0;
-    padding: 0 15px 10px;
+    padding: 0 12px 10px;
     text-align: center;
-    width: 905px;
+    width: 907px;
 }
 
 .last_content_agreement{
@@ -687,8 +682,8 @@ label[for="total"]{
     font-size: 13px;
     /*height: 288px;*/
     margin: 0;
-    padding: 0 15px 10px;
-    width: 905px;
+    padding: 0 12px 10px;
+    width: 907px;
     overflow-y: auto;
 }
 

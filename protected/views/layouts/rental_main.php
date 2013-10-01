@@ -48,7 +48,7 @@
                 $(".year").mask("?9999");
                 $(".spinner").spinner({min:0});
                 
-                $("#form_subs").cycle({
+                $("#form_list").cycle({
                     fx: 'scrollHorz',
                     prev: '.back',
                     next: '.next',
@@ -60,27 +60,27 @@
 
                         switch(zeroBasedSlideIndex){
                             case 0:
-                                $("#form_subs").css('height', '1011px');
-                                $("#form_subs_last").css('height', '1011px');
+                                $("#form_list").css('height', '1035px');
+                                $("#form_subs_last").css('height', '1035px');
                                 $(".step_form").css('height', '998px');
                                 break;
                             case 1:
-                                $("#form_subs").css('height', '460px');
+                                $("#form_list").css('height', '460px');
                                 $("#form_subs_last").css('height', '460px');
                                 $(".step_form").css('height', '432px');
                                 break;
                             case 2:
-                                $("#form_subs").css('height', '406px');
+                                $("#form_list").css('height', '406px');
                                 $("#form_subs_last").css('height', '406px');
                                 $(".step_form").css('height', '379px');
                                 break;
                             case 3:
-                                $("#form_subs").css('height', '566px');
+                                $("#form_list").css('height', '566px');
                                 $("#form_subs_last").css('height', '566px');
                                 $(".step_form").css('height', '539px');
                                 break;
                             case 4:
-                                $("#form_subs").css('height', '340px');
+                                $("#form_list").css('height', '340px');
                                 $("#form_subs_last").css('height', '340px');
                                 break;
                             case 5:
@@ -91,7 +91,7 @@
                         if(active_id == 1){                                 
                             if(zeroBasedSlideIndex > 3){
                                 $(".applicant_list").hide();            
-                                $("#form_subs").attr('id', 'form_subs_last');
+                                $("#form_list").attr('id', 'form_subs_last');
                                 $("#forms").attr('id', 'forms_last');
                                 $(".form_sub_nav").attr('class', 'form_sub_nav_last');
                                 $(".add_applicant_button").hide();
@@ -111,7 +111,7 @@
                                 } else {
                                     
                                     $(".applicant_list").show();
-                                    $("#form_subs_last").attr('id', 'form_subs');
+                                    $("#form_subs_last").attr('id', 'form_list');
                                     $("#forms_last").attr('id', 'forms');
                                     $(".form_sub_nav_last").attr('class', 'form_sub_nav');
 

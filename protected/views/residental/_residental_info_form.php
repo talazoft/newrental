@@ -36,7 +36,7 @@
                 <?php 
                     echo CHtml::dropDownList("ResidentalHistory[agent_landlord_type]", "", 
                             array("Lanlord"=>"Lanlord", "Agent"=>"Agent"),
-                            array('style'=>'width:97%', 'required'=>'required'));
+                            array('style'=>'width:95%', 'required'=>'required'));
                 ?>
             </td>
         </tr>
@@ -85,7 +85,7 @@
                                         array('style'=>'width:56px', 'id'=>"state", 'required'=>'required'))
                             ?>
                         </td>
-                        <td>&nbsp;</td>
+                        <td style="width: 44px;">&nbsp;&nbsp;&nbsp;&nbsp;</td>
                         <td>
                             <label>Zip Code</label>
                         </td>

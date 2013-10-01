@@ -40,7 +40,7 @@
                 <?php 
                     echo CHtml::dropDownList("DependantInfo[stay_in]", "", 
                         array('1' => 'Yes', '0' => 'No'),
-                        array('style' => 'width:96%', 'empty'=>'Choose one')
+                        array('style' => 'width:94%', 'empty'=>'Choose one')
                     );  
                 ?>
             </td>

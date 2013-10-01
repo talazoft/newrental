@@ -47,6 +47,7 @@ $(function(){
                 $("#"+i).removeAttr('active');
                 $("#"+i).empty();
                 $("#"+i).html(empty_template);
+                
             } else {
                 $("#"+i).attr('empty', 'true');
                 $("#"+i).attr('class', 'empty_form_tab');
@@ -378,7 +379,7 @@ $(function(){
                         <img src="<?php echo Yii::app()->baseUrl; ?>/image/close.png">
                     </a>
                 </div> */?>
-                <div id="form_subs">
+                <div id="form_list">
                     <?php $this->renderPartial('_step1_form'); ?>
                     <?php $this->renderPartial('_step2_form'); ?>
                     <?php $this->renderPartial('_step3_form'); ?>

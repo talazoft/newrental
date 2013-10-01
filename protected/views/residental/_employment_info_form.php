@@ -33,7 +33,7 @@ $(function(){
     });    
 });
 </script>
-<div style="margin-left: 14px;">
+<div style="margin-left: 14px; width: 335px">
 <?php 
     $empType = array(
         "fulltime" => "Full Time",
@@ -45,7 +45,7 @@ $(function(){
     echo CHtml::dropdownList("EmploymentInfo[employment_type]", "", 
             $empType, 
             array('id'=>"employment_type$cnt", 
-                'required'=>'required', 'style'=>'width: 288px'));
+                'required'=>'required', 'style'=>'width: 100%'));
 ?>
 </div>
 <div id="employed<?php echo $cnt; ?>" style="display: none">
