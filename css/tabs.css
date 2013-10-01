@@ -332,7 +332,8 @@ label[for="total"]{
 
 #forms_last{
     border: 1px solid #AEB0B1;
-    width: 955px;
+    width: 952px;
+    margin: 0 0 0 4px;
 }
 
 .form_sub1/*, .form_subs*/ {

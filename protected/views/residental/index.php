@@ -16,7 +16,7 @@ $(function(){
         $("#totalfee").html("$"+total);
         
         if(i > 1){
-            $("#close_form2").show();
+            $("#removeapplicant").show();
         }
         
         e.stopPropagation();
@@ -25,7 +25,7 @@ $(function(){
     $("#removeapplicant").unbind('click').click(function(e){
         
         if(i == 2){
-            $("#close_form2").hide();
+            $("#removeapplicant").hide();
         }
         
         var isactive = $(".active_form_tab").hasAttr('active');
@@ -211,7 +211,7 @@ $(function(){
 //    });
 });
 </script>
-<div class="main_subject_head">
+<div class="main_subject_head" style="margin-bottom: 0px;">
     <div class="thumb">
         <img src="<?php echo Yii::app()->baseUrl; ?>/image/thumb6.jpg">
     </div>
@@ -234,7 +234,7 @@ $(function(){
         <section class="selection_category"><a href="#" style="text-decoration:none; color:#568d06;">2 Bedroom</a></section> 
     </div>
 </div><!---main_subject_head end----> 
-<div class="content">
+<div class="content" style="padding: 0px;">
     <div id="tab_container"> <?php /*
         <div class="tab_nav">
             <div class="add_applicant_text">Applicant : <label for="applicant_sum" id="applicant_num">1</label></div>
@@ -368,7 +368,7 @@ $(function(){
                 
             <div class="tab_nav">
                 <div class="add_applicant_button" id="addapplicant"><a><img src="<?php echo Yii::app()->baseUrl; ?>/image/positive.png"></a></div>
-                <div class="add_applicant_button" id="removeapplicant"><a><img src="<?php echo Yii::app()->baseUrl; ?>/image/negative.png"></a></div>
+                <div class="add_applicant_button" id="removeapplicant" style="display: none;"><a><img src="<?php echo Yii::app()->baseUrl; ?>/image/negative.png"></a></div>
                 <!---<div class="add_applicant_text">Applicant summary : <label for="applicant_sum">8</label></div>---->
             </div>
             </div><!---applicant_list_non_active  end---->
@@ -398,9 +398,9 @@ $(function(){
                         <div class="next" id="btnfinish"><a>Finish</a></div>
                     </div>      
                     <div id="btns">
-                        <div class="next"><a>Save and go to next step</a></div>
+                        <div class="next"><a>Save and go to next step >></a></div>
                     </div>
-                    <div class="back" style="display: none;"><a>Back</a></div>
+                    <div class="back" style="display: none;"><a><< Back</a></div>
                 </div><!---form_sub_nav end---->
             </div><!---form1 end---->
         </div><!---tabs end---->
