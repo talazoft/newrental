@@ -94,7 +94,7 @@
                                 $("#form_list").attr('id', 'form_subs_last');
                                 $("#forms").attr('id', 'forms_last');
                                 $(".form_sub_nav").attr('class', 'form_sub_nav_last');
-                                $(".add_applicant_button").hide();
+                                //$(".add_applicant_button").hide();
 
                                 if(zeroBasedSlideIndex > 4){
                                     $("#last_buttons").show();
@@ -124,7 +124,7 @@
                                     }
                                 }
 
-                                $(".add_applicant_button").show();
+                                //$(".add_applicant_button").show();
                             }
                         } else {
                             if(zeroBasedSlideIndex > 2){
