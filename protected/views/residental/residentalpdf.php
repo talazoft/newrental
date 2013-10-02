@@ -405,7 +405,7 @@
 <div class="maincontent">
 
 		<div class="head_content">
-        	<div class="logo"><img src="image/logo2.png"></div>
+        	<div class="logo"><img src="<?php echo Yii::app()->baseUrl ?>/image/logo2.png"></div>
             <div class="title">
             	<div class="title_text">Application To Rent Apartment</div>
             </div><!---title end---->
