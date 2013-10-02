@@ -1,29 +1,29 @@
-<div style="width:45%; height: 100%; margin: 10px; float: left;">
+<div style="width:275px; height: 100%; margin: 10px 10px 10px 145px; float: left;">
     <table width="100%">
         <tr>
-            <td width="109px">
+            <td width="168px">
                 <label>License Plate</label>
             </td>
             <td>:</td>
             <td>
-                <?php echo CHtml::textField("VehicleInfo[license_plate]", "", array('style'=>'width:70%', 'id'=>"VehicleInfo_license_plate")); ?>
+                <?php echo CHtml::textField("VehicleInfo[license_plate]", "", array('style'=>'width:180px', 'id'=>"VehicleInfo_license_plate")); ?>
             </td>
         </tr>
         <tr>
-            <td width="109px">
+            <td width="168px">
                 <label>Make/Model</label>
             </td>
             <td>:</td>
             <td>
-                <?php echo CHtml::textField("VehicleInfo[maker_model]", "", array('style'=>'width:70%', 'id'=>"VehicleInfo_maker_model")); ?>
+                <?php echo CHtml::textField("VehicleInfo[maker_model]", "", array('style'=>'width:180px', 'id'=>"VehicleInfo_maker_model")); ?>
             </td>
         </tr>
     </table>
 </div>
-<div style="width:49%; height: 100%; margin: 10px; float: left;">
+<div style="width:275px; height: 100%; margin: 10px; float: left;">
     <table width="100%">
         <tr>
-            <td width="172px">
+            <td width="50px">
                 <label>Year</label>
             </td>
             <td>:</td>
